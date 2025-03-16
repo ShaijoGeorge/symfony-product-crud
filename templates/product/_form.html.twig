@@ -1,0 +1,23 @@
+{{ form_start(form) }} 
+
+<div class="mb-3">
+    {{ form_label(form.name, 'Product Name:') }}
+    {{ form_widget(form.name, { 'attr': {'class': 'form-control', 'id': 'product_name'} }) }}
+    {{ form_errors(form.name) }}
+</div>
+
+<div class="mb-3">
+    {{ form_label(form.price, 'Price (Rs.):') }}
+    {{ form_widget(form.price, { 'attr': {'class': 'form-control', 'id': 'product_price'} }) }}
+    {{ form_errors(form.price) }}
+</div>
+
+<div class="mb-3">
+    {{ form_label(form.description, 'Description:') }}
+    {{ form_widget(form.description, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_errors(form.description) }} 
+</div>
+
+<button class="btn btn-primary btn-sm">{{ button_label|default('Save') }}</button>
+
+{{ form_end(form) }}
